@@ -6,3 +6,7 @@ Then /^it displays '(.*)'$/ do |display|
   @machine.display.should == display
 end
 
+When /^I insert a '(.*)'$/ do |coin|
+  @machine.insert_coin coin.to_sym
+end
+

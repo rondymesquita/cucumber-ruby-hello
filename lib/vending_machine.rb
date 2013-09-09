@@ -1,5 +1,20 @@
 class VendingMachine
-  def display
-    'INSERT COIN'
+
+  attr_reader :display
+
+  def initialize
+    @display = 'INSERT COIN'
   end
+
+  def insert_coin coin
+    @display = coins[coin]
+  end
+
+  private
+
+  def coins
+    { :nickel => '0.05', :dime => '0.10', :quarter => '0.25' }
+  end
+
 end
+
