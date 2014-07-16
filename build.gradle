@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven {
+        	url "http://repo.bodar.com/"
+        }	
+    }
+    dependencies {
+    }
+}
+
+apply plugin: 'eclipse'
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testRuntime
+    }
+}	
+	
+repositories {
+    mavenCentral()
+    mavenLocal()
+        maven {
+        	url "http://repo.bodar.com/"
+        }
+}
+
+dependencies {
+    	
+}
+
